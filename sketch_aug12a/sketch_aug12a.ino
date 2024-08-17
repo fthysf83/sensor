@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL6oxIdGCZ6"
+#define BLYNK_TEMPLATE_ID "********"
 #define BLYNK_TEMPLATE_NAME "Assignment3"
-#define BLYNK_AUTH_TOKEN "IxeH1qQATPMNSzgX8lR1ALUMsrM4jutd"
+#define BLYNK_AUTH_TOKEN "********"
 #define BLYNK_PRINT Serial
 
 #include <WiFi.h>
@@ -24,8 +24,8 @@ DHT dht(DHTPIN, DHTTYPE);
 BlynkTimer timer;
 
 // Telegram Bot settings
-const String botToken = "7249313958:AAG3ndbAV4OBeE-lCuk6cL91wx7P2ttndyM";  // Your bot token
-const String chatID = "752308021";  // Your chat ID
+const String botToken = "****";  // Your bot token
+const String chatID = "*******";  // Your chat ID
 WiFiClientSecure client;  // For secure communication with Telegram
 UniversalTelegramBot bot(botToken, client);
 
@@ -79,9 +79,6 @@ void sendSensorData() {
     Serial.println("Failed to read from DHT sensor!");
     return;
   }
-
-  temperature += 20.0;  // Adjustment: Modify temperature if needed
-  humidity += 10.0;  // Adjustment: Modify humidity if needed
 
   // *** Data Storage Implementation ***
   Blynk.virtualWrite(V1, temperature);  // Store temperature in Virtual Pin V1
